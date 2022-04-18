@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type"  charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">   
+
+    <!--自定义图标插件 20201125-->
+    <link href="icomoon/style.css" rel="stylesheet" />
+    <script src="jquery/jquery.min.js"></script>
+    <script>
+        $(function ($) {
+            // panduan();
+        })
+
+     function panduan()
+          {
+            jQuery.ajax({
+                type: 'post',
+                async: false,
+                dataType: 'text',
+                url: 'dqrs.aspx',
+                success: function (msg) {
+                  
+                    a = msg;
+
+                    console.log(a);
+                    if (a > 2000) {
+                        location.href = "waiting.aspx";
+                    }
+                },
+                beforeSend: function (XHR) {
+                   
+                },
+                complete: function (x) {
+                 
+                }
+            });
+      
+
+        }
+      
+    </script>
+    <title>注册电气工程师模拟考试系统</title>
+    <style>
+        body {
+            background: #f7f7f7;
+    padding: 10px;
+    text-align:center
+        }
+        img {
+            display: block;
+    text-align: center;
+    margin: 0 auto;
+        }
+        .content {
+            width: 1200px;
+    height: 500px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    line-height: 400px;
+    text-align: center;
+
+        }
+        .content a {
+          display: inline-block;
+    width: 300px;
+    height: 200px;
+    background: #f9923a;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 30px;
+    border: 1px solid #c37432;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-shadow: 0 0 12px rgba(0,0,0,.3);
+}
+
+
+        .content a i{
+            font-size: 48px;
+    margin-top: 40px;
+    display: block;
+        }
+        .content a:last-child {
+                background: ##f9923a;
+    border: 1px solid #182261;
+        }
+        .content a:last-child i{
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="content">
+        <img src="img/logo.png" />
+        <a href="../login.html"><i class="icon-table"></i><br />进入考试系统</a>
+        <a href="http://10.100.0.121:8019/customer/index/index0.html" style=" background-color:#2230af"><i class="icon-database-line"></i><br />进入练习模式</a>
+          <a href="http://10.100.0.121:8021/" ><i class="icon-table-line"></i><br />教师登录</a>
+    </div>
+     
+</body>
+</html>
